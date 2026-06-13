@@ -73,8 +73,25 @@ def main():
         # do this until we dont find anymore dogs: when find() returns -1
     print(f"There are {number_of_dogs} {search_word}(s) in the sentence.")
 
+    print("\n Using the Split() Method \n ---------------------")
+    car_info = "Ferrai,F-50,2025,500000,4.8\n"
+    car_data = car_info.split(",")
+    print(f"Car data: {car_data}")
 
+    # Get the individual items from the list
+    make = car_data[0]
+    model = car_data[1]
+    year = int(car_data[2])
+    price = float(car_data[3])
+    engine_size = float(car_data[4])
+    print(f"{year} {make} {model}")
+    print(f"Price: ${price:,.2f} - Engine Size: {engine_size}")
 
+    print("\nSubstring Method\n--------------")
+
+    index_of_comma = car_info.find(",")
+    make_substring = car_info[start_index: index_of_comma]
+    print(f"Make: {make}")
 
     
 
