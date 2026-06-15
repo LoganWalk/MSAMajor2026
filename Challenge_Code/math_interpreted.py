@@ -4,7 +4,7 @@ def main():
         
     # Input
     # Prompt the user
-        expression = input(f"enter your expression(use operators +,-,*,/)(space bewteen everything): ")
+        expression = input("enter your expression(X Y Z): ")
 
 
     #Process
@@ -12,7 +12,7 @@ def main():
         #use the split method to split the expression at the space
         split_expression = expression.split(" ")
         #if the length of the resulting list is not 3 then invalid format
-        if(len(split_expression) < 3 or len(split_expression) > 3):
+        if(len(split_expression) != 3):
             print("Invalid Format")
             continue
     #Validate that X and Z are integers
@@ -21,15 +21,15 @@ def main():
             x = int(split_expression[0])
             z = int(split_expression[2])
         except:
-            print("Invalid Format")
+            print("Invalid Format: x and Z have to be integers")
             continue
         #If converting causes an exception then incorrect or invalid format
     #Validate that Y is an acceptable operator (+,-,*,/)
         y = split_expression[1]
         # use an if statement to determine if Y equals a valid operator
-        
-        if(y != "+" or y != "-" or y != "*" or y != "/"):
-            print("Invalid Format")
+        valid_operators = ["+", "-", "*", "/"]
+        if y not in valid_operators:
+            print("Invalid Format: Operator not right")
             continue
 
 
@@ -53,9 +53,9 @@ def main():
 
         #OUTPUT
         #Print the answer
-        print(f"Your answer is: {result}")
+        print(f"Your answer is: {result:.1f}")
         # ask to do it again
-        do_again = input("Press y if you want to go again, fi you dont want to go again then press 0")
+        do_again = input("Press y if you want to go again, fi you dont want to go again then press 0: ")
         if(do_again == "y"):
             continue
         if(do_again == "0"):
