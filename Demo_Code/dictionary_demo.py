@@ -1,0 +1,30 @@
+def main():
+    # The need for dictionaries
+    scores = [55,75,87,82,91]
+    students = ["Alice","Bob","Jerry","Jane","Bill"]
+
+    # Print the names of the students with their scores
+    print("Students and scores using the lists\n----------------------------")
+
+    for index in range(len(scores)):
+        print(f"{students[index]}:{scores[index]}")
+
+    # Create a dictonary of names and scores
+    student_scores = {
+        "Alice":55,
+        "Bob":75,
+        "Jerry":87,
+        "Jane":82,
+        "Bill":91
+    }
+    #print bob and janes scores
+
+    print("\n Print Bob and Janes Scores\n---------------------")
+    print(student_scores["Bob"])
+    print(student_scores["Jane"])
+
+    # Print all the data ion the student scores dictonary
+
+    for student in student_scores:
+        print(f"{student} : {student_scores[student]}")
+main()
