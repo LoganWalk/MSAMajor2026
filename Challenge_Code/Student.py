@@ -13,19 +13,19 @@ class Student():
     def get_first_name(self):
         return self.__first_name
     
-    def set_first_name(self, new_name: float):
+    def set_first_name(self, new_name: str):
         self.__first_name = new_name
     
     def get_last_name(self):
         return self.__last_name
     
-    def set_last_name(self, new_last_name: float):
+    def set_last_name(self, new_last_name: str):
         self.__last_name = new_last_name
     
     def get_major(self):
         return self.__major
     
-    def set_major(self, new_major: float):
+    def set_major(self, new_major: str):
         self.__major = new_major
     
     def get_credit_hours(self):
